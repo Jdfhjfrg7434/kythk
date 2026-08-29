@@ -28,7 +28,7 @@ const config = {
     // Bot Configuration
     AUTO_VIEW_STATUS: 'true',
     AUTO_LIKE_STATUS: 'true',
-    MENTION_REPLY: 'false',
+    MENTION_REPLY: 'true',
     AUTO_RECORDING: 'false',
     AUTO_REACT: 'false',
     AUTO_TYPING: 'false',
@@ -83,7 +83,7 @@ const config = {
         // Status & View Settings
         AUTO_VIEW_STATUS: 'true',
         AUTO_LIKE_STATUS: 'true',
-        MENTION_REPLY: 'false',
+        MENTION_REPLY: 'true',
         AUTO_STATUS_SEEN: 'true',
         READ_MESSAGE: 'false',
         
