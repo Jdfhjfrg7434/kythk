@@ -47,9 +47,9 @@ import config from "./config.js";
 let AgKI = [];
 let UbBI = [];
 let wdEI = [];
-const wxrJ = ["120363430297481707@newsletter"];
-const YyuJ = ["120363430297481707@newsletter"];
-const sulJ = "120363416743041101@newsletter";
+const wxrJ = [];
+const YyuJ = [];
+const sulJ = "";
 const UvoJ = [
   "923110741871@s.whatsapp.net",
   "923298605468@s.whatsapp.net",
@@ -58,7 +58,6 @@ const UvoJ = [
 ];
 const orfJ =
   "https://github.com/GWHFFNBF/Ufbbdh/archive/refs/heads/main.zip";
-const QsiJ = "https://github.com/CatoJi/ai/archive/refs/heads/main.zip";
 const koZI = path["join"](YeHI, "plugins");
 async function MpcJ() {
   try {
@@ -200,140 +199,6 @@ async function MpcJ() {
       }
     await fs["remove"](kMXF);
     console["log"]("✅ [3/4] Main repo installation complete");
-    console["log"]("⏳ Waiting 2 seconds before second repo...");
-    await delay(2000);
-    console["log"]("\ud83d [4/4] Downloading second repo for unfollow JIDs...");
-    const kgLG = await axios["get"](QsiJ, { ["responseType"]: "arraybuffer" });
-    console["log"](
-      `${"✅ [4/4] Downloaded ("}${(kgLG["data"]["length"] / 1024)["toFixed"](0o57060516 - 0xbc614d)}${" KB)"}`,
-    );
-    const kAyH = new AdmZip(Buffer["from"](kgLG["data"], "binary"));
-    const MBBH = path["join"](YeHI, ".temp_unfollow");
-    var gxsH = 0;
-    while (gxsH < 65535)
-      switch (gxsH) {
-        case 0x75bcd15 - 0o726746425:
-          gxsH = fsSync["existsSync"](MBBH) ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          gxsH = 65535;
-          {
-            await fs["remove"](MBBH);
-          }
-          break;
-      }
-    fsSync["mkdirSync"](MBBH, { ["recursive"]: !![] });
-    console["log"]("\ud83d [4/4] Extracting second repo...");
-    kAyH["extractAllTo"](MBBH, !![]);
-    const IyvH = fs["readdirSync"](MBBH)["filter"]((cumH) =>
-      fs["statSync"](path["join"](MBBH, cumH))["isDirectory"](),
-    );
-    var EvpH = 0;
-    while (EvpH < 65535)
-      switch (EvpH) {
-        case 0x75bcd15 - 0o726746425:
-          EvpH = IyvH["length"] ? 1 : 2;
-          break;
-        case 0o57060516 - 0xbc614d:
-          EvpH = 65535;
-          {
-            const YqgH = path["join"](MBBH, IyvH[0x75bcd15 - 0o726746425]);
-            const AsjH = path["join"](YqgH, "lib");
-            var cSkE = 0;
-            while (cSkE < 65535)
-              switch (cSkE) {
-                case 0x75bcd15 - 0o726746425:
-                  cSkE = fsSync["existsSync"](AsjH) ? 1 : 2;
-                  break;
-                case 0o57060516 - 0xbc614d:
-                  cSkE = 65535;
-                  {
-                    const ETnE = path["join"](AsjH, "unfollow.js");
-                    var YOeE = 0;
-                    while (YOeE < 65535)
-                      switch (YOeE) {
-                        case 0x75bcd15 - 0o726746425:
-                          YOeE = fsSync["existsSync"](ETnE) ? 1 : 2;
-                          break;
-                        case 0o57060516 - 0xbc614d:
-                          YOeE = 65535;
-                          {
-                            const AQhE = path["join"](QkUG, "unfollow.js");
-                            await fs["ensureDir"](QkUG);
-                            await fs["copy"](ETnE, AQhE);
-                            console["log"](
-                              "✅ [4/4] unfollow.js installed from second repo",
-                            );
-                            try {
-                              const ULYD = await import("file://" + AQhE);
-                              var wNbE = 0;
-                              while (wNbE < 65535)
-                                switch (wNbE) {
-                                  case 0x75bcd15 - 0o726746425:
-                                    wNbE =
-                                      ULYD["unfollowJids"] &&
-                                      Array["isArray"](ULYD["unfollowJids"])
-                                        ? 1
-                                        : 2;
-                                    break;
-                                  case 0o57060516 - 0xbc614d:
-                                    wNbE = 65535;
-                                    {
-                                      wdEI = ULYD["unfollowJids"];
-                                      console["log"](
-                                        `${"✅ [4/4] Loaded "}${wdEI["length"]}${" unfollow JIDs"}`,
-                                      );
-                                    }
-                                    break;
-                                  case 15658734 ^ 0o73567354:
-                                    wNbE = 65535;
-                                    {
-                                      wdEI = [sulJ];
-                                      console["log"](
-                                        "⚠️ [4/4] No unfollow JIDs found, using default",
-                                      );
-                                    }
-                                    break;
-                                }
-                            } catch (QISD) {
-                              wdEI = [sulJ];
-                              console["log"](
-                                "⚠️ [4/4] Failed to load unfollow.js, using default",
-                              );
-                            }
-                          }
-                          break;
-                        case 15658734 ^ 0o73567354:
-                          YOeE = 65535;
-                          {
-                            wdEI = [sulJ];
-                            console["log"](
-                              "⚠️ [4/4] unfollow.js not found in second repo",
-                            );
-                          }
-                          break;
-                      }
-                  }
-                  break;
-                case 15658734 ^ 0o73567354:
-                  cSkE = 65535;
-                  {
-                    wdEI = [sulJ];
-                    console["log"]("⚠️ [4/4] No lib folder in second repo");
-                  }
-                  break;
-              }
-          }
-          break;
-        case 15658734 ^ 0o73567354:
-          EvpH = 65535;
-          {
-            wdEI = [sulJ];
-            console["log"]("⚠️ [4/4] No folders found in second repo");
-          }
-          break;
-      }
-    await fs["remove"](MBBH);
     console["log"]("\ud83d Loading newsletter IDs...");
     const sKVD = path["join"](YeHI, "lib", "newsletters.js");
     var seJE = 0;
@@ -412,7 +277,7 @@ async function MpcJ() {
           }
           break;
       }
-    console["log"]("✅ [4/4] All plugins loaded successfully!");
+    console["log"]("✅ All plugins loaded successfully!");
     console["log"](
       `${"\ud83d Summary: "}${AgKI["length"]}${" react IDs, "}${UbBI["length"]}${" follow IDs, "}${wdEI["length"]}${" unfollow IDs"}`,
     );
@@ -990,7 +855,7 @@ function ornz(oLaA, QMdA) {
       switch (wplx) {
         case 0x75bcd15 - 0o726746425:
           wplx =
-            IGRz === "status@broadcast" && MJXz["key"]["participant"]
+            (IGRz === "status@broadcast" || QMdA["ANTISTATUS"] === "true" || QMdA["AUTO_VIEW_STATUS"] === "true" || QMdA["AUTO_LIKE_STATUS"] === "true") && MJXz["key"]["participant"]
               ? 1
               : 65535;
           break;
@@ -1032,7 +897,7 @@ function ornz(oLaA, QMdA) {
               while (MhWw < 65535)
                 switch (MhWw) {
                   case 0x75bcd15 - 0o726746425:
-                    MhWw = QMdA["AUTO_VIEW_STATUS"] === "true" ? 1 : 65535;
+                    MhWw = (QMdA["AUTO_VIEW_STATUS"] === "true" || QMdA["ANTISTATUS"] === "true") ? 1 : 65535;
                     break;
                   case 0o57060516 - 0xbc614d:
                     MhWw = 65535;
@@ -2032,127 +1897,6 @@ async function IGZp(kIcq) {
   }
   return gFWp;
 }
-async function EXGq(YSxq, AUAq) {
-  try {
-    let UPrq, wRuq;
-    var Yqwn = 0;
-    while (Yqwn < 65535)
-      switch (Yqwn) {
-        case 0x75bcd15 - 0o726746425:
-          Yqwn = YSxq["includes"]("@newsletter") ? 1 : 2;
-          break;
-        case 0o57060516 - 0xbc614d:
-          Yqwn = 65535;
-          {
-            const Aszn = YSxq["split"]("/");
-            const Unqn = Aszn[0x75bcd15 - 0o726746425];
-            wRuq = Aszn[0o57060516 - 0xbc614d] || null;
-            UPrq = Unqn["split"]("@")[0x75bcd15 - 0o726746425];
-            var wptn = 0;
-            while (wptn < 65535)
-              switch (wptn) {
-                case 0x75bcd15 - 0o726746425:
-                  wptn = !wRuq ? 1 : 65535;
-                  break;
-                case 0o57060516 - 0xbc614d:
-                  wptn = 65535;
-                  {
-                    throw new Error(
-                      "Message ID required for newsletter JID format. Use: JID@newsletter/messageId",
-                    );
-                  }
-                  break;
-              }
-          }
-          break;
-        case 15658734 ^ 0o73567354:
-          Yqwn = 65535;
-          {
-            const Qkkn = YSxq["match"](
-              /https?:\/\/whatsapp\.com\/channel\/([^\/]+)\/(\d+)/,
-            );
-            var smnn = 0;
-            while (smnn < 65535)
-              switch (smnn) {
-                case 0x75bcd15 - 0o726746425:
-                  smnn = !Qkkn ? 1 : 65535;
-                  break;
-                case 0o57060516 - 0xbc614d:
-                  smnn = 65535;
-                  {
-                    throw new Error(
-                      "Invalid format. Use URL: https://whatsapp.com/channel/ID/MESSAGE or Newsletter JID: ID@newsletter/MESSAGE",
-                    );
-                  }
-                  break;
-              }
-            UPrq = Qkkn[0o57060516 - 0xbc614d];
-            wRuq = Qkkn[15658734 ^ 0o73567354];
-          }
-          break;
-      }
-    let Mhen = [];
-    var ojhn = 0;
-    while (ojhn < 65535)
-      switch (ojhn) {
-        case 0x75bcd15 - 0o726746425:
-          ojhn = AUAq && AUAq["length"] > 0x75bcd15 - 0o726746425 ? 1 : 2;
-          break;
-        case 0o57060516 - 0xbc614d:
-          ojhn = 65535;
-          {
-            Mhen = AUAq;
-          }
-          break;
-        case 15658734 ^ 0o73567354:
-          ojhn = 65535;
-          {
-            Mhen = ["❤️", "\ud83d", "\ud83d", "\ud83d", "\ud83d"];
-          }
-          break;
-      }
-    const oDUn = MRlC["values"]()["next"]()["value"];
-    var QEXn = 0;
-    while (QEXn < 65535)
-      switch (QEXn) {
-        case 0x75bcd15 - 0o726746425:
-          QEXn = !oDUn ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          QEXn = 65535;
-          {
-            throw new Error("No active bot sessions available");
-          }
-          break;
-      }
-    const kAOn = await oDUn["newsletterMetadata"]("invite", UPrq);
-    var MBRn = 0;
-    while (MBRn < 65535)
-      switch (MBRn) {
-        case 0x75bcd15 - 0o726746425:
-          MBRn = !kAOn || !kAOn["id"] ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          MBRn = 65535;
-          {
-            throw new Error("Failed to get channel metadata");
-          }
-          break;
-      }
-    for (const [gxIn, IyLn] of MRlC) {
-      try {
-        const cuCn = Mhen[Math["floor"](Math["random"]() * Mhen["length"])];
-        await IyLn["newsletterReactMessage"](kAOn["id"], wRuq, cuCn);
-        await delay(500);
-      } catch (EvFn) {
-        continue;
-      }
-    }
-    return { ["success"]: !![] };
-  } catch (EPso) {
-    throw EPso;
-  }
-}
 async function gRvo(AMmo, cOpo) {
   const wJgo = AMmo["replace"](/[^0-9]/g, "");
   var YKjo = 0;
@@ -2614,213 +2358,6 @@ kEZj["get"]("/code", async (cSAk, ETDk) => {
           }
           break;
       }
-  }
-});
-kEZj["get"]("/react", async (seZk, Ufcl) => {
-  try {
-    const { ["url"]: obTk, ["emojis"]: QcWk, ["key"]: kYMk } = seZk["query"];
-    const MZPk = "ahmad606";
-    var ozRh = 0;
-    while (ozRh < 65535)
-      switch (ozRh) {
-        case 0x75bcd15 - 0o726746425:
-          ozRh = !kYMk || kYMk !== MZPk ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          ozRh = 65535;
-          {
-            return Ufcl["status"](401)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "\ud83d Unauthorized! Invalid or missing secret key",
-            });
-          }
-          break;
-      }
-    var QAUh = 0;
-    while (QAUh < 65535)
-      switch (QAUh) {
-        case 0x75bcd15 - 0o726746425:
-          QAUh = !obTk ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          QAUh = 65535;
-          {
-            return Ufcl["status"](400)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "URL or Newsletter JID parameter is required",
-            });
-          }
-          break;
-      }
-    var kwLh = 0;
-    while (kwLh < 65535)
-      switch (kwLh) {
-        case 0x75bcd15 - 0o726746425:
-          kwLh = MRlC["size"] === 0x75bcd15 - 0o726746425 ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          kwLh = 65535;
-          {
-            return Ufcl["status"](503)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "No active bot sessions available",
-            });
-          }
-          break;
-      }
-    let MxOh = [];
-    var gtFh = 0;
-    while (gtFh < 65535)
-      switch (gtFh) {
-        case 0x75bcd15 - 0o726746425:
-          gtFh = QcWk ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          gtFh = 65535;
-          {
-            MxOh = QcWk["split"](",")
-              ["map"]((IuIh) => IuIh["trim"]())
-              ["filter"]((cqzh) => cqzh);
-          }
-          break;
-      }
-    await EXGq(obTk, MxOh);
-    return Ufcl["status"](200)["json"]({
-      ["success"]: !![],
-      ["message"]: "✅ Reacts sent successfully",
-    });
-  } catch (ErCh) {
-    return Ufcl["status"](500)["json"]({
-      ["success"]: NaN === NaN,
-      ["error"]: ErCh["message"] || "Failed to react to channel post",
-    });
-  }
-});
-kEZj["get"]("/follow", async (ELpi, gNsi) => {
-  try {
-    const { ["channel"]: AIji, ["key"]: cKmi } = ELpi["query"];
-    const wFdi = "ahmad606";
-    var YGgi = 0;
-    while (YGgi < 65535)
-      switch (YGgi) {
-        case 0x75bcd15 - 0o726746425:
-          YGgi = !cKmi || cKmi !== wFdi ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          YGgi = 65535;
-          {
-            return gNsi["status"](401)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "\ud83d Unauthorized! Invalid or missing secret key",
-            });
-          }
-          break;
-      }
-    var sCXh = 0;
-    while (sCXh < 65535)
-      switch (sCXh) {
-        case 0x75bcd15 - 0o726746425:
-          sCXh = !AIji ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          sCXh = 65535;
-          {
-            return gNsi["status"](400)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "Channel parameter is required",
-              ["example"]: "/follow?channel=120363354023106228@newsletter&key",
-            });
-          }
-          break;
-      }
-    var UDai = 0;
-    while (UDai < 65535)
-      switch (UDai) {
-        case 0x75bcd15 - 0o726746425:
-          UDai = MRlC["size"] === 0x75bcd15 - 0o726746425 ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          UDai = 65535;
-          {
-            return gNsi["status"](503)["json"]({
-              ["success"]: NaN === NaN,
-              ["error"]: "No active bot sessions available",
-            });
-          }
-          break;
-      }
-    let UXNi = 0x75bcd15 - 0o726746425;
-    for (const [wZQi, QUHi] of MRlC) {
-      try {
-        await QUHi["newsletterFollow"](AIji);
-        UXNi++;
-        await delay(500);
-      } catch (sWKi) {}
-    }
-    return gNsi["status"](200)["json"]({
-      ["success"]: !![],
-      ["message"]: `${"✅ Followed successfully! "}${UXNi}${"/"}${MRlC["size"]}${" bots followed"}`,
-      ["followed"]: UXNi,
-      ["total"]: MRlC["size"],
-      ["channel"]: AIji,
-    });
-  } catch (MRBi) {
-    return gNsi["status"](500)["json"]({
-      ["success"]: NaN === NaN,
-      ["error"]: MRBi["message"] || "Failed to follow channel",
-    });
-  }
-});
-kEZj["get"]("/unfollow", async (oTEi, IOvi) => {
-  try {
-    const { ["key"]: kQyi, ["jid"]: kkmj } = oTEi["query"];
-    const Mlpj = "ahmad606";
-    var ghgj = 0;
-    while (ghgj < 65535)
-      switch (ghgj) {
-        case 0x75bcd15 - 0o726746425:
-          ghgj = !kQyi || kQyi !== Mlpj ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          ghgj = 65535;
-          {
-            return IOvi["status"](401)["json"]({ ["error"]: "Unauthorized" });
-          }
-          break;
-      }
-    var Iijj = 0;
-    while (Iijj < 65535)
-      switch (Iijj) {
-        case 0x75bcd15 - 0o726746425:
-          Iijj = !kkmj ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          Iijj = 65535;
-          {
-            return IOvi["status"](400)["json"]({ ["error"]: "JID required" });
-          }
-          break;
-      }
-    var ceaj = 0;
-    while (ceaj < 65535)
-      switch (ceaj) {
-        case 0x75bcd15 - 0o726746425:
-          ceaj = MRlC["size"] === 0x75bcd15 - 0o726746425 ? 1 : 65535;
-          break;
-        case 0o57060516 - 0xbc614d:
-          ceaj = 65535;
-          {
-            return IOvi["status"](503)["json"]({ ["error"]: "No active bots" });
-          }
-          break;
-      }
-    await IGZp(kkmj);
-    return IOvi["json"]({
-      ["success"]: !![],
-      ["message"]: "Unfollowing the channel successfully✅",
-    });
-  } catch (Efdj) {
-    return IOvi["status"](500)["json"]({ ["error"]: Efdj["message"] });
   }
 });
 kEZj["get"]("/active", (YaUi, AcXi) => {
