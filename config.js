@@ -63,8 +63,8 @@ const config = {
     OWNER_NAME: 'DOCTOR-MD',
     OWNER_NUMBER: '923195068309',
     DEV: '923195068309',
-    IK_IMAGE_PATH: './lib/doctormd.jpg',
-    BOT_IMAGE: 'https://i.ibb.co/84NpJd5V/1787977996211.png',
+    IK_IMAGE_PATH: 'https://i.ibb.co/qMvTTr4k/doctormd.jpg',
+    BOT_IMAGE: 'https://i.ibb.co/qMvTTr4k/doctormd.jpg',
     
     // Newsletter Configuration
     NEWSLETTER_JID: '120363426641229472@newsletter',
@@ -123,7 +123,7 @@ const config = {
         MODE: 'public',
         PREFIX: '.',
         BOT_NAME: 'DOCTOR-MD',
-        BOT_IMAGE: 'https://i.ibb.co/84NpJd5V/1787977996211.png',
+        BOT_IMAGE: 'https://i.ibb.co/qMvTTr4k/doctormd.jpg',
         
         // Emoji Lists
         STATUS_REACT_EMOJIS: ['💗', '🎀', '🫠', '🫶', '🌚', '💐'],
