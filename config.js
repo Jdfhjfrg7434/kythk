@@ -40,7 +40,7 @@ const config = {
     ANTI_EDIT_PATH: 'inbox',
     ANTI_EDIT: 'false',
     STICKER_NAME: 'DOCTOR-MD',
-    ANTI_LINK: 'true',
+    ANTI_LINK: 'warn',
     ANTI_STATUS: 'true',
     WELCOME: 'false',
     GOODBYE: 'false',
@@ -100,7 +100,7 @@ const config = {
         ANTI_EDIT: 'false',
         ANTI_EDIT_PATH: 'inbox',
         ANTI_CALL: 'false',
-        ANTI_LINK: 'true',
+        ANTI_LINK: 'warn',
         ANTI_STATUS: 'true',
         
         // Group Events
